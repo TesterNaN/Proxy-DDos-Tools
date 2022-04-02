@@ -53,7 +53,8 @@ class daili:
 
         file = open('IP.txt', 'w')
         for i in range(len(can_use)):
-            s = str(can_use[i])
+            str0 = str(can_use[i])
+            s = str0.replace("{", "").replace("}", "").replace(":", "").replace("HTTP", "").replace("'", "").replace("*", ":").replace(" ", "")
             file.write(s)
         file.close()
 
